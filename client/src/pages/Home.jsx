@@ -90,11 +90,11 @@ export default function Home() {
       {/*TOP*/}
       <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
         {/*top*/}
-        <Link to={
+         <Link to={
                 "https://wa.me/+5493516308388"}
               className={""}
               target={"_blank"}>
-        <div className="fixed bottom-[10%] right-[8%] sm:right-[2%] z-10 rounded-full w-12 h-12 flex justify-center items-center bg-green-400 cursor-pointer hover:shadow-xl">
+        <div className="fixed bottom-[15%] right-[18%] sm:right-[2%] z-10 rounded-full w-12 h-12 flex justify-center items-center bg-green-400 cursor-pointer hover:shadow-xl">
             <FaWhatsapp
               className="text-white text-3xl"
 
@@ -102,7 +102,6 @@ export default function Home() {
             />
           </div>
         </Link>
-        
         <div className="text-slate-700 font-bold text-3xl lg:text-6xl ">
           <h1>
           Mariela Benitez Inmobiliaria:  <span className="text-red-900">Construyendo tus Sueños</span>
