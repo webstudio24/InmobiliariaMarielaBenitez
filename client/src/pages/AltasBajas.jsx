@@ -18,6 +18,7 @@ export default function AltasBajas() {
             />
           </div>
         </Link>
+    </div>
    
     // <div className="bg-green-500 text-white rounded-lg uppercase hover:opacity-95 p-3 text-center flex items-center justify-center">
     //             <div className="text-center mr-2 text-2xl">
