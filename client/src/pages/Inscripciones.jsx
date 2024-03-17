@@ -10,7 +10,7 @@ export default function Inscripciones() {
                 "https://wa.me/+5493516308388"}
               className={""}
               target={"_blank"}>
-        <div className="fixed bottom-[15%] right-[18%] sm:right-[2%] z-10 rounded-full w-12 h-12 flex justify-center items-center bg-green-400 cursor-pointer hover:shadow-xl">
+        <div className="fixed bottom-[11%] right-[18%] sm:right-[2%] z-10 rounded-full w-12 h-12 flex justify-center items-center bg-green-400 cursor-pointer hover:shadow-xl">
             <FaWhatsapp
               className="text-white text-3xl"
 
