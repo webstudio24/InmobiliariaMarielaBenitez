@@ -60,6 +60,7 @@ const [showMore, setShowMore] = useState(false);
     };
 
     fetchListings();
+    window.scrollTo(0, 0);
 
   },[location.search]);
  
