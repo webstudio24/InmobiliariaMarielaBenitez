@@ -10,7 +10,7 @@ export default function AltasBajas() {
                 "https://wa.me/+5493516308388"}
               className={""}
               target={"_blank"}>
-        <div className="fixed bottom-[10%] right-[8%] sm:right-[2%] z-10 rounded-full w-12 h-12 flex justify-center items-center bg-green-400 cursor-pointer hover:shadow-xl">
+        <div className="fixed bottom-[15%] right-[18%] sm:right-[2%] z-10 rounded-full w-12 h-12 flex justify-center items-center bg-green-400 cursor-pointer hover:shadow-xl">
             <FaWhatsapp
               className="text-white text-3xl"
 
@@ -18,7 +18,6 @@ export default function AltasBajas() {
             />
           </div>
         </Link>
-    </div>
    
     // <div className="bg-green-500 text-white rounded-lg uppercase hover:opacity-95 p-3 text-center flex items-center justify-center">
     //             <div className="text-center mr-2 text-2xl">
