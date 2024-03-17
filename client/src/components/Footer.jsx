@@ -40,14 +40,15 @@ function Footer() {
         </div>
 
         <div className="p-5">
-          <ul>
+          <ul className="">
             <p className="text-white font-bold text-2xl pb-4">Ubicación</p>
             <li className="text-white text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.5993934567928!2d-64.19193672459916!3d-31.397607874270378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329863ffcef9eb%3A0x6f1dde91af821119!2sNicol%C3%A1s%20Avellaneda%201466%2C%20X5000LKH%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1710445236199!5m2!1ses!2sar"
                 width="300"
                 height="300"
-                style={{ border: 0 }}
+                className="ml-0  pr-16"
+                style={{ border: 0, textAlign: "center" }}
                 allowFullScreen=""
                 loading="lazy"
               ></iframe>
