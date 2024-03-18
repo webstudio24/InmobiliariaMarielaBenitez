@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon api/index.js",
-    "start": "node api/index.js",
-     "build": "[client] build --output public"
+    "start": "node api/index.js"
    
   },
   "keywords": [],
