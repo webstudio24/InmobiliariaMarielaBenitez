@@ -111,8 +111,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="text-slate-700 text-xs sm:text-sm">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea eveniet nesciunt magnam nisi numquam maxime aliquam voluptatem cumque est perferendis ut ex nostrum iure dolor asperiores mollitia, porro tenetur esse veniam nihil a possimus in! Qui iste nobis id, repudiandae quisquam sit ratione voluptas. <br />
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque dolor consectetur ullam laboriosam obcaecati!
+           En la inmobiliaria Mariela Benítez nos dedicamos a ofrecerte soluciones integrales para tus necesidades de vivienda. Nuestro equipo de profesionales está comprometido en brindarte un servicio personalizado y eficiente, ayudándote a encontrar la propiedad perfecta que se adapte a tus requisitos y estilo de vida. Ya sea que estés buscando comprar, vender o alquilar una propiedad, estamos aquí para guiarte en cada paso del proceso con experiencia y dedicación.
         </div>
         <Link
           to={"/search"}
