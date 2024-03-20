@@ -116,18 +116,18 @@ export default function Header() {
               </ul>
             )}
           </li>
-          <li className=' sm:inline'>
+          <li className=' inline sm:inline'>
             <Link to='/profile'>
               {currentUser ? (
                 <img className='rounded-full h-7 w-7 object-cover ' src={currentUser.avatar} alt="profile" />
-              ) : (<FaUser className=' text-slate-100  sm:inline hover:underline ' />)
+              ) : (<FaUser className='  text-slate-100  inline sm:inline hover:underline ' />)
               }
             </Link>
           </li>
 
           <li className='inline sm:hidden  text-slate-100 ' >
             <button onClick={toggleMobileMenu} className="mobile-menu-button">
-              <GiHamburgerMenu className='hover:bg-red-800 rounded-full' />
+              <GiHamburgerMenu className='hover:bg-red-800 inline sm:inline rounded-full'' />
             </button>
             <ul ref={mobileMenuRef} className={`absolute bg-red-900 rounded-lg shadow-md mt-2 p-6 z-50 mr-5 text-white ${isMobileMenuOpen ? 'block' : 'hidden'}`} style={{ right: 0 }}>
               <Link to='/' onClick={closeMobileMenu}><li className='hover:underline p-2'>Inicio</li></Link>
