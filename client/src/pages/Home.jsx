@@ -6,7 +6,9 @@ import SwiperCore from "swiper";
 import { Navigation } from "swiper/modules";
 import ListingItem from '../components/ListingItem';
 import { FaWhatsapp } from "react-icons/fa";
-
+import img1 from "../assets/img/img1.jpg";
+import img2 from "../assets/img/img2.jpg";
+import img3 from "../assets/img/img3.jpg";
 export default function Home() {
   const [houseListings, setHouseListings] = useState([]);
   const [galponListings, setGalponListings] = useState([]);
@@ -90,11 +92,11 @@ export default function Home() {
       {/*TOP*/}
       <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
         {/*top*/}
-         <Link to={
+        <Link to={
                 "https://wa.me/+5493516308388"}
               className={""}
               target={"_blank"}>
-        <div className="fixed bottom-[11%] right-[18%] sm:right-[2%] z-10 rounded-full w-12 h-12 flex justify-center items-center bg-green-400 cursor-pointer hover:shadow-xl">
+        <div className="fixed bottom-[15%] right-[18%] sm:right-[2%] z-10 rounded-full w-12 h-12 flex justify-center items-center bg-green-400 cursor-pointer hover:shadow-xl">
             <FaWhatsapp
               className="text-white text-3xl"
 
@@ -102,6 +104,7 @@ export default function Home() {
             />
           </div>
         </Link>
+        
         <div className="text-slate-700 font-bold text-3xl lg:text-6xl ">
           <h1>
           Mariela Benitez Inmobiliaria:  <span className="text-red-900">Construyendo tus Sueños</span>
@@ -121,23 +124,40 @@ export default function Home() {
 
       {/*SWIPER*/}
       <Swiper navigation>
-        {houseListings &&
-          houseListings.length > 0 &&
-          houseListings.map((listing) => (
-            <SwiperSlide key={listing._id}>
-              <div
-                style={{
-                  backgroundImage: `url(${listing.imageUrls[0]})`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                  height: "500px",
-                }}
-              ></div>
-            </SwiperSlide>
-          ))}
-      </Swiper>
-
+      <SwiperSlide>
+        <div
+          style={{
+            backgroundImage: `url(${img1})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            height: '500px',
+          }}
+        ></div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div
+          style={{
+            backgroundImage: `url(${img2})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            height: '500px',
+          }}
+        ></div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div
+          style={{
+            backgroundImage: `url(${img3})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            height: '500px',
+          }}
+        ></div>
+      </SwiperSlide>
+    </Swiper>
       {/*LISTINGS*/}
 
       <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 my-10">
