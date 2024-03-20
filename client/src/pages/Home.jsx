@@ -127,7 +127,7 @@ export default function Home() {
       <SwiperSlide>
         <div
           style={{
-            backgroundImage: `url(${img1})`,
+            backgroundImage: `url(${img2})`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
@@ -138,7 +138,7 @@ export default function Home() {
       <SwiperSlide>
         <div
           style={{
-            backgroundImage: `url(${img2})`,
+            backgroundImage: `url(${img1})`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
