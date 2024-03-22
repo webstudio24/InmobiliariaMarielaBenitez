@@ -88,7 +88,8 @@ export default function Home() {
   }, []);
   
   return (
-    <div className="w-full">
+  <body>
+      <div className="w-full overflow-x-hidden">
       {/*TOP*/}
       <div className="flex flex-col gap-6 p-8 sm:p-28 mx-auto max-w-screen-lg">
         {/*top*/}
@@ -282,5 +283,6 @@ export default function Home() {
         )}
       </div>
     </div>
+    </body>
   );
 }
