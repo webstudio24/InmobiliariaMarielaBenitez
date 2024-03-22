@@ -88,15 +88,15 @@ export default function Home() {
   }, []);
   
   return (
-    <div>
+    <div className="w-full">
       {/*TOP*/}
-      <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
+      <div className="flex flex-col gap-6 p-8 sm:p-28 mx-auto max-w-screen-lg">
         {/*top*/}
         <Link to={
                 "https://wa.me/+5493516308388"}
               className={""}
               target={"_blank"}>
-        <div className="fixed bottom-[7%] right-[12%] sm:right-[2%] z-10 rounded-full w-12 h-12 flex justify-center items-center bg-green-400 cursor-pointer hover:shadow-xl">
+        <div className="fixed bottom-[7%] right-[7%] sm:right-[2%] z-10 rounded-full w-12 h-12 flex justify-center items-center bg-green-400 cursor-pointer hover:shadow-xl">
             <FaWhatsapp
               className="text-white text-3xl"
 
@@ -110,8 +110,9 @@ export default function Home() {
           Mariela Benitez Inmobiliaria:  <span className="text-red-900">Construyendo tus Sueños</span>
           </h1>
         </div>
-        <div className="text-slate-700 text-xs sm:text-sm">
-           En la inmobiliaria Mariela Benítez nos dedicamos a ofrecerte soluciones integrales para tus necesidades de vivienda. Nuestro equipo de profesionales está comprometido en brindarte un servicio personalizado y eficiente, ayudándote a encontrar la propiedad perfecta que se adapte a tus requisitos y estilo de vida. Ya sea que estés buscando comprar, vender o alquilar una propiedad, estamos aquí para guiarte en cada paso del proceso con experiencia y dedicación.
+        <div className="text-slate-700 text-xs sm:text-sm ">
+        En la inmobiliaria Mariela Benítez nos dedicamos a ofrecerte soluciones integrales para tus necesidades de vivienda. Nuestro equipo de profesionales está comprometido en brindarte un servicio personalizado y eficiente, ayudándote a encontrar la propiedad perfecta que se adapte a tus requisitos y estilo de vida.  
+        Ya sea que estés buscando comprar, vender o alquilar una propiedad, estamos aquí para guiarte en cada paso del proceso con experiencia y dedicación.
         </div>
         <Link
           to={"/search"}
@@ -122,44 +123,50 @@ export default function Home() {
       </div>
 
       {/*SWIPER*/}
-      <Swiper navigation>
+      <Swiper navigation className="w-full">
       <SwiperSlide>
         <div
+        className="w-full"
           style={{
             backgroundImage: `url(${img2})`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             height: '500px',
+          
+          
           }}
         ></div>
       </SwiperSlide>
       <SwiperSlide>
-        <div
+        <div className="h-500px bg-cover bg-center w-full"
           style={{
             backgroundImage: `url(${img1})`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             height: '500px',
+           
           }}
         ></div>
       </SwiperSlide>
       <SwiperSlide>
         <div
+        className="h-500px bg-cover bg-center w-full"
           style={{
             backgroundImage: `url(${img3})`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             height: '500px',
+         
           }}
         ></div>
       </SwiperSlide>
     </Swiper>
       {/*LISTINGS*/}
 
-      <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 my-10">
+      <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 my-10  w-full">
         {houseListings && houseListings.length > 0 && (
           <div className="">
             <div className="my-3">
