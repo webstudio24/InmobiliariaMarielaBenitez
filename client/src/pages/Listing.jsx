@@ -81,7 +81,7 @@ export default function Listing() {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="fixed top-[13%] right-[7%] z-10 border rounded-full w-12 h-12 flex justify-center items-center bg-slate-100 cursor-pointer">
+          <div className="fixed top-[13%] right-[7%] z-10 border rounded-full w-12 h-12 flex justify-center items-center bg-slate-100 cursor-pointer" alt="Copiar Enlace">
             <FaShare
               className="text-slate-500"
               onClick={() => {
@@ -95,7 +95,7 @@ export default function Listing() {
           </div>
           {copied && (
             <p className="fixed top-[23%] right-[15%]  z-10 rounded-md bg-slate-100 p-2">
-              Link copiado!
+             Enlace copiado!
             </p>
           )}
           <div className="flex flex-col max-w-4xl mx-auto p-3 my-7 gap-4 ">
