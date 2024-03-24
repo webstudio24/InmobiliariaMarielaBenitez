@@ -63,7 +63,7 @@ export default function SignIn() {
         <button disabled={loading} className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-90 disabled:opacity-85">
           {loading ? "Iniciando sesión" : "Iniciar sesión"}
         </button>
-        <OAuth/>
+        
       </form>
       {error && <p className="text-red-500">{error}</p>}
     </div>
