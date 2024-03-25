@@ -5,7 +5,7 @@ export default function CedulaAzul() {
   return (
     <div>
        <h1 className='text-3xl font-bold mb-4 text-slate-800'>Cédula Azul</h1>
-       <p className='mb-4 text-slate-700'>Tranutanis cédula azul, la cual autoriza a un tercero, no propietario del vehículo, a la circulación del mismo en la vía pública.</p>
+       <p className='mb-4 text-slate-700'>Los trámites de Cédula Azul, la cual autoriza a un tercero, no propietario del vehículo, a la circulación del mismo en la vía pública.</p>
     <Link to={
                 "https://wa.me/+5493516308388"}
               className={""}
