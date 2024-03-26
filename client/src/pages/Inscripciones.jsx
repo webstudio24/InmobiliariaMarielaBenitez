@@ -1,11 +1,16 @@
 import React from 'react'
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import inscripciones from '../assets/img/inscripciones.png';
 export default function Inscripciones() {
   return (
-    <div>
+    <div className='py-20 px-4 max-w-6xl mx-auto'>
         <h1 className='text-3xl font-bold mb-4 text-slate-800'>Inscripciones</h1>
-        <p className='mb-4 text-slate-700'>Una vez adquirido un vehículo ya sea que haya sido inscripto anteriormente o se trate de un 0km, es reglamentario la inscripción o transferencia del mismo en los registros seccionales correspondientes a nombre del titular o titulares del mismo</p>
+        <p className='mb-4 text-slate-700'>Una vez adquirido un vehículo, ya sea que haya sido inscripto anteriormente o se trate de un 0km, es obligatorio realizar la inscripción o transferencia del mismo en el Registro Seccional de la Propiedad Automotor correspondiente al domicilio del titular o titulares.
+</p>
+<p className='mb-4 text-slate-700'>Para más información sobre cómo realizar la transferencia de dominio de un vehículo en Córdoba, Argentina, no dude en contactarnos a nuestro WhatsApp. <br />¡Esperamos su consulta!
+<img src={inscripciones} alt="" className="w-50 bg-cover bg-center border rounded-lg" />
+</p>
         <Link to={
                 "https://wa.me/+5493516308388"}
               className={""}
