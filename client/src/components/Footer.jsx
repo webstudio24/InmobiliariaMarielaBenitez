@@ -12,10 +12,13 @@ function Footer() {
           <div className="flex flex-col items-center">
             <img src={logo} alt="" className="h-20 w-30 sm:w-30" />
             <p className="overflow-ellipsis max-w-[220px] text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
-              molestiae esse, nostrum nemo iure asperiores at, explicabo dolore
-              facere quasi minima ducimus? Laborum in maxime esse eum ab dolores
-              odio.
+           
+Somos un equipo dedicado a convertir los sueños de nuestros clientes en realidad en el mercado inmobiliario. Con un enfoque personalizado y pasión por ayudar, ofrecemos un servicio integral y de calidad para encontrar el hogar ideal.
+
+
+
+
+
             </p>
           </div>
         </div>
