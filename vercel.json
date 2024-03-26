@@ -4,10 +4,8 @@
     { "src": "api/index.js", "use": "@vercel/node" },
     { "src": "client", "use": "@vercel/static-build" }
   ],
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    },
-    "command": "npm install && npm install --prefix api && npm install --prefix client && npm run build --prefix client"
+  "env": {
+    "JWT_SECRET": "eoiajreopqrmvnxvzxv619876231641",
+    "MONGO": "mongodb+srv://webstudio2024:webstudio2024@inmo-mb.zxr4bds.mongodb.net/inmo-mb?retryWrites=true&w=majority"
   }
 }
