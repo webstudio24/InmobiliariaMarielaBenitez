@@ -6,13 +6,12 @@
   ],
   "env": {
     "JWT_SECRET": "eoiajreopqrmvnxvzxv619876231641",
-    "MONGO": "mongodb+srv://webstudio2024:webstudio2024@inmo-mb.zxr4bds.mongodb.net/inmo-mb?retryWrites=true&w=majority",
-    "NODE_ENV": "production"
+    "MONGO": "mongodb+srv://webstudio2024:webstudio2024@inmo-mb.zxr4bds.mongodb.net/inmo-mb?retryWrites=true&w=majority"
   },
   "build": {
     "env": {
       "NODE_ENV": "production"
     },
-    "src": "npm install && npm install --prefix api && npm install --prefix client && npm run build --prefix client"
+    "command": "npm install && npm install --prefix api && npm install --prefix client && npm run build --prefix client"
   }
 }
