@@ -1,11 +1,17 @@
 import React from 'react'
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import cedulaazul from '../assets/img/cedulas.png';
 export default function CedulaAzul() {
   return (
-    <div>
-       <h1 className='text-3xl font-bold mb-4 text-slate-800'>Cédula Azul</h1>
-       <p className='mb-4 text-slate-700'>Los trámites de Cédula Azul, la cual autoriza a un tercero, no propietario del vehículo, a la circulación del mismo en la vía pública.</p>
+    <div className='py-20 px-4 max-w-6xl mx-auto'>
+       <h1 className='text-3xl font-bold mb-4 text-slate-800'>Cédula Azul: tranquilidad para vos y tu vehículo
+</h1>
+       <p className='mb-4 text-slate-700'>¿Necesitas que un tercero circule con tu vehículo?
+</p>
+<p className='mb-4 text-slate-700'>Con la Cédula Azul, podrás autorizar a cualquier persona a conducir tu auto sin necesidad de realizar trámites adicionales.
+<img src={cedulaazul} alt="" className="w-50 bg-cover bg-center border rounded-lg" />
+</p>
     <Link to={
                 "https://wa.me/+5493516308388"}
               className={""}
