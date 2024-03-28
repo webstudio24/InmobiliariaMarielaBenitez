@@ -20,12 +20,12 @@ export default function Home() {
 
   useEffect(() => {
     const fetchHouseListings = async () => {
-    
+      window.scrollTo(0, 0);
       try {
         const res = await fetch("/api/listing/get?type_property=casa&limit=3");
         const data = await res.json();
         setHouseListings(data);
-        window.scrollTo(0, 0);
+       
         fetchGalponListings();
       } catch (error) {
         console.log(error);
@@ -81,7 +81,7 @@ export default function Home() {
         console.log(error);
       }
     };
-   
+    
     fetchHouseListings();
     
     
