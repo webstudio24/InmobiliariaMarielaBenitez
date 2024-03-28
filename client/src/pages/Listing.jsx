@@ -133,7 +133,7 @@ export default function Listing() {
             <div className=" rounded-xl border-slate-300 border-2  hover:border-red-900 p-4 bg-white" >
                 
             
-            <h3 className="text-2xl font-semibold mb-4 border-l-2 ml-2 mr-4 border-red-900 pl-2">$CONSULTAR</h3>
+            <h3 className="text-2xl font-semibold mb-4 border-l-2 ml-2 mr-4 border-red-900 pl-2">$ CONSULTAR</h3>
 
             <ul className="text-red-900 font-semibold text-sm flex flex-wrap items-center gap-4 sm:gap-6   ">
               
