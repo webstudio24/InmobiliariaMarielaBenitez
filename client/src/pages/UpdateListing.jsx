@@ -18,7 +18,7 @@ export default function CreateListing() {
     type_property: "casa",
     bedrooms: 0,
     bathrooms: 0,
-    regularPrice: 50,
+    regularPrice: 0,
     discountedPrice: 0,
     offer: false,
     parking: false,
@@ -442,7 +442,7 @@ useEffect(()=>{
               <input
                 type="number"
                 id="regularPrice"
-                min="50"
+                min="0"
                 max="1000000000000"
                 required
                 className="p-3 border border-gray-300 rounded-lg"
