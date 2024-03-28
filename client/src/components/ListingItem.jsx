@@ -29,8 +29,7 @@ function ListingItem({ listing }) {
             {listing.description}
           </p>
           <p className="text-white mt-2 font-semibold ">
-            ${listing.offer ? listing.discountPrice : listing.regularPrice}
-            {listing.type === "rent" && " / mes"}
+            $ CONSULTAR
           </p>
 
           <div className="text-white flex gap-4">
