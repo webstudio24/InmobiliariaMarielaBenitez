@@ -184,7 +184,7 @@ export default function Listing() {
 {listing.cochera === true && (
                 <li className="flex items-center gap-1 whitespace-nowrap ">
                   < FaCarAlt className="text-lg" />
-                  {listing.parking ? "Cochera" : "Sin cochera"}
+                  {listing.cochera ? "Cochera" : "Sin cochera"}
                 </li>
               )}
 
