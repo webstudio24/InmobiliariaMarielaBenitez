@@ -199,7 +199,7 @@ export default function Listing() {
               {listing.pool && (
                 <li className="flex items-center gap-1 whitespace-nowrap ">
                   <FaSwimmingPool className="text-lg" />
-                  {listing.furnished ? "Pileta" : "Sin Pileta"}
+                  {listing.pool ? "Pileta" : "Sin Pileta"}
                 </li>
               )}
             </ul>
