@@ -15,9 +15,10 @@ export default function Home() {
   const [terrenoListings, setTerrenoListings] = useState([]);
   const [departamentoListings, setDepartamentoListings] = useState([]);
   const [localListings, setLocalListings] = useState([]);
+   const [isLoading, setIsLoading] = useState(true); 
   SwiperCore.use([Navigation]);
 
-   window.scrollTo(0, 0);
+  
   useEffect(() => {
     const fetchHouseListings = async () => {
      
@@ -84,9 +85,16 @@ export default function Home() {
  
     
     fetchHouseListings();
-    
+     setIsLoading(false);
     
   }, []);
+  
+  useEffect(() => {
+    // Scroll to top solo si los datos no están cargando
+    if (!isLoading) {
+      window.scrollTo(0, 0);
+    }
+  }, [isLoading]);
   
   return (
 
