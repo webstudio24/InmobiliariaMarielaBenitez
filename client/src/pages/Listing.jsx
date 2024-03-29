@@ -48,7 +48,7 @@ export default function Listing() {
         setListing(data);
         setLoading(false);
         setError(false);
-        window.scrollTo(0, 0);
+        
       } catch (error) {
         console.log(error);
         setError(true);
@@ -58,7 +58,12 @@ export default function Listing() {
     fetchListing();
   }, [params.listingId]);
 
-  console.log(loading);
+ useEffect(() => {
+    // Scroll to top solo si los datos no están cargando
+    if (!loading) {
+      window.scrollTo(0, 0);
+    }
+  }, [loading]);
   return (
     <main>
       {loading && <p className="text-center my-7 text-2xl">Cargando...</p>}
