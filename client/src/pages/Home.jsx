@@ -17,15 +17,15 @@ export default function Home() {
   const [localListings, setLocalListings] = useState([]);
   SwiperCore.use([Navigation]);
 
-
+   window.scrollTo(0, 0);
   useEffect(() => {
     const fetchHouseListings = async () => {
-      window.scrollTo(0, 0);
+     
       try {
         const res = await fetch("/api/listing/get?type_property=casa&limit=3");
         const data = await res.json();
         setHouseListings(data);
-          window.scrollTo(0, 0);
+        
         fetchGalponListings();
       } catch (error) {
         console.log(error);
@@ -39,7 +39,7 @@ export default function Home() {
         );
         const data = await res.json();
         setGalponListings(data);
-          window.scrollTo(0, 0);
+        
         fetchDepartamentoListings();
       } catch (error) {
         console.log(error);
@@ -51,7 +51,7 @@ export default function Home() {
         const res = await fetch("/api/listing/get?type_property=dpto&limit=3");
         const data = await res.json();
         setDepartamentoListings(data);
-        window.scrollTo(0, 0);
+       
         fetchTerrenoListings();
       } catch (error) {
         console.log(error);
@@ -65,7 +65,7 @@ export default function Home() {
         );
         const data = await res.json();
         setTerrenoListings(data);
-          window.scrollTo(0, 0);
+         
         fetchLocalListings();
       } catch (error) {
         console.log(error);
@@ -81,7 +81,7 @@ export default function Home() {
         console.log(error);
       }
     };
-    window.scrollTo(0, 0);
+ 
     
     fetchHouseListings();
     
