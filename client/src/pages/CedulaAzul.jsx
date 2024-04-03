@@ -10,8 +10,11 @@ export default function CedulaAzul() {
        <p className='mb-4 text-slate-700'>¿Necesitas que un tercero circule con tu vehículo?
 </p>
 <p className='mb-4 text-slate-700'>Con la Cédula Azul, podrás autorizar a cualquier persona a conducir tu auto sin necesidad de realizar trámites adicionales.
-<img src={cedulaazul} alt="" className="w-50 bg-cover bg-center border rounded-lg" />
 </p>
+  <p>También puede contactarnos a nuestro WhatsApp para obtener asesoramiento sobre este tema. <br/>
+¡Esperamos su consulta!</p>
+    <img src={cedulaazul} alt="" className="w-50 bg-cover bg-center border rounded-lg" />
+      
     <Link to={
                 "https://wa.me/+5493516308388"}
               className={""}
