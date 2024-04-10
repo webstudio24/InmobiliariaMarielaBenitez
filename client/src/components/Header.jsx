@@ -12,16 +12,25 @@ const removeAccents = (str) => {
 export default function Header() {
   const { currentUser } = useSelector(stats => stats.user);
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenInm, setIsOpenInm] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
   const mobileMenuRef = useRef(null);
   const menuRef = useRef(null);
+  const menuRefInm = useRef(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+    
   };
+
+
+  /*menu inmuebles */
+  const toggleDropdownInm = () =>{
+    setIsOpenInm(!isOpenInm)
+  }
   
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -33,6 +42,11 @@ export default function Header() {
 
   const closeMenu = () => {
     setIsOpen(false);
+  };
+
+
+  const closeMenuInm = () => {
+    setIsOpenInm(false);
   };
 
   const handleClickOutside = (event) => {
@@ -51,6 +65,14 @@ export default function Header() {
         !event.target.closest('.menu-button')) {
       closeMenu();
     }
+
+
+    if (isOpenInm && 
+      menuRefInm.current && 
+      !menuRefInm.current.contains(event.target) && 
+      !event.target.closest('.menu-inm')) {
+    closeMenuInm();
+  }
   };
 
   const handleSubmit = (e) => {
@@ -77,7 +99,7 @@ export default function Header() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isMobileMenuOpen, isOpen]); // Ejecutar el efecto cada vez que cambie el estado de isMobileMenuOpen o isOpen
+  }, [isMobileMenuOpen, isOpen, isOpenInm]); // Ejecutar el efecto cada vez que cambie el estado de isMobileMenuOpen o isOpen
 
   return (
     <header className='bg-red-900'>
@@ -101,7 +123,19 @@ export default function Header() {
         <ul className='flex gap-4'>
           <Link to='/about'>
             <li className='hidden sm:inline  text-slate-100 hover:underline'>Nosotros</li>
-          </Link>          
+          </Link>
+          <li className='relative'>
+            <button onClick={toggleDropdownInm} className='menu-inm hidden sm:inline text-slate-100 hover:underline '>
+              Inmuebles<svg className='w-4 h-4 inline-block ml-1' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M10 12l-6-6h12l-6 6z' clip-rule='evenodd'></path></svg>
+            </button>
+            {isOpenInm && (
+              <ul ref={menuRefInm} className='absolute  bg-red-900 rounded-lg shadow-md mt-2 p-4 z-50 text-white'>
+                <Link to='/search?searchTerm=&type=sale&type_property=all&sort=created_at&order=desc' onClick={closeMenuInm}><li className='hover:underline'>Venta</li></Link>
+                <Link to='/search?searchTerm=&type=rent&type_property=all&sort=created_at&order=desc' onClick={closeMenuInm}><li className='hover:underline'>Alquiler</li></Link>
+               
+              </ul>
+            )}
+          </li>          
           <li className='relative'>
             <button onClick={toggleDropdown} className='menu-button hidden sm:inline text-slate-100 hover:underline '>
               Tramites<svg className='w-4 h-4 inline-block ml-1' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M10 12l-6-6h12l-6 6z' clip-rule='evenodd'></path></svg>
@@ -137,6 +171,8 @@ export default function Header() {
               <Link to='/informes' onClick={closeMobileMenu}><li className='hover:underline p-2'>Informes</li></Link>
               <Link to='/altas-bajas' onClick={closeMobileMenu}><li className='hover:underline p-2'>Altas/Bajas</li></Link>
               <Link to='/cedula-azul' onClick={closeMobileMenu}><li className='hover:underline p-2'>Cédula Azul</li></Link>
+              <Link to='/search?searchTerm=&type=sale&type_property=all&sort=created_at&order=desc' onClick={closeMobileMenu}><li className='hover:underline p-2'>Venta</li></Link>
+              <Link to='/search?searchTerm=&type=rent&type_property=all&sort=created_at&order=desc' onClick={closeMobileMenu}><li className='hover:underline p-2'>Alquiler</li></Link>
             </ul>
           </li>
         </ul>
