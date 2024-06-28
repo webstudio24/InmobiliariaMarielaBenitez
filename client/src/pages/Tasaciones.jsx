@@ -9,7 +9,7 @@ export default function CedulaAzul() {
     <div className='py-20 px-4 max-w-6xl mx-auto'>
        <h1 className='text-3xl font-bold mb-4 text-slate-800'>Tasaciones
 </h1>
-       <p className='mb-4 text-slate-700'>Esta página estará disponible pronto!
+       <p className='mb-4 text-slate-700'>Realizamos tasaciones de inmuebles, para poder brindar información útil sobre una propiedad. Describe lo que la hace valiosa y puede mostrar cómo se compara con otras propiedades en la zona. El método empleado en la valuaciones es el Comparativo, que consiste en estudiar antecedentes de venta y ofertas en la zona, teniendo en cuenta además sus cualidades individuales de cada inmueble ofrecido y a su vez comparar con el inmueble a valuar. 
 </p>
   
     <img src={tasacion} alt="" className="w-50 bg-cover bg-center border rounded-lg" />
