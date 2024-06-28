@@ -132,13 +132,13 @@ export default function Header() {
               <ul ref={menuRefInm} className='absolute  bg-red-900 rounded-lg shadow-md mt-2 p-4 z-50 text-white'>
                 <Link to='/search?searchTerm=&type=sale&type_property=all&sort=created_at&order=desc' onClick={closeMenuInm}><li className='hover:underline'>Venta</li></Link>
                 <Link to='/search?searchTerm=&type=rent&type_property=all&sort=created_at&order=desc' onClick={closeMenuInm}><li className='hover:underline'>Alquiler</li></Link>
-               
+                <Link to='/tasaciones' onClick={closeMenu}><li className='hover:underline'>Tasaciones</li></Link>               
               </ul>
             )}
           </li>          
           <li className='relative'>
             <button onClick={toggleDropdown} className='menu-button hidden sm:inline text-slate-100 hover:underline '>
-              Tramites<svg className='w-4 h-4 inline-block ml-1' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M10 12l-6-6h12l-6 6z' clip-rule='evenodd'></path></svg>
+              Automotores<svg className='w-4 h-4 inline-block ml-1' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M10 12l-6-6h12l-6 6z' clip-rule='evenodd'></path></svg>
             </button>
             {isOpen && (
               <ul ref={menuRef} className='absolute  bg-red-900 rounded-lg shadow-md mt-2 p-4 z-50 text-white'>
