@@ -146,7 +146,6 @@ export default function Header() {
                 <Link to='/inscripciones' onClick={closeMenu}><li className='hover:underline'>Inscripciones</li></Link>
                 <Link to='/informes' onClick={closeMenu}><li className='hover:underline'>Informes</li></Link>
                 <Link to='/altas-bajas' onClick={closeMenu}><li className='hover:underline'>Altas/Bajas</li></Link>
-                <Link to='/cedula-azul' onClick={closeMenu}><li className='hover:underline'>Cédula Azul</li></Link>
               </ul>
             )}
           </li>
@@ -170,7 +169,6 @@ export default function Header() {
               <Link to='/inscripciones' onClick={closeMobileMenu}><li className='hover:underline p-2'>Inscripciones</li></Link>
               <Link to='/informes' onClick={closeMobileMenu}><li className='hover:underline p-2'>Informes</li></Link>
               <Link to='/altas-bajas' onClick={closeMobileMenu}><li className='hover:underline p-2'>Altas/Bajas</li></Link>
-              <Link to='/cedula-azul' onClick={closeMobileMenu}><li className='hover:underline p-2'>Cédula Azul</li></Link>
               <Link to='/tasaciones' onClick={closeMobileMenu}><li className='hover:underline p-2'>Tasaciones</li></Link>
               <Link to='/search?searchTerm=&type=sale&type_property=all&sort=created_at&order=desc' onClick={closeMobileMenu}><li className='hover:underline p-2'>Venta</li></Link>
               <Link to='/search?searchTerm=&type=rent&type_property=all&sort=created_at&order=desc' onClick={closeMobileMenu}><li className='hover:underline p-2'>Alquiler</li></Link>
