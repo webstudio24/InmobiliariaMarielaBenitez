@@ -9,7 +9,7 @@ import Transferencias from './pages/Transferencias';
 import Inscripciones from './pages/Inscripciones';
 import Informes from './pages/Informes';
 import AltasBajas from './pages/AltasBajas';
-import CedulaAzul from './pages/CedulaAzul';
+// import CedulaAzul from './pages/CedulaAzul';
 import PrivateRoute from './components/PrivateRoute';
 import CreateListing from './pages/CreateListing';
 import UpdateListing from './pages/UpdateListing';
@@ -48,7 +48,7 @@ export default function App() {
         <Route path='/inscripciones' element={<Inscripciones />} />
         <Route path='/informes' element={<Informes />} />
         <Route path='/altas-bajas' element={<AltasBajas />} />
-        <Route path='/cedula-azul' element={<CedulaAzul />} />
+        {/* <Route path='/cedula-azul' element={<CedulaAzul />} /> */}
         <Route path='/tasaciones' element={<Tasaciones />} />
 
 
