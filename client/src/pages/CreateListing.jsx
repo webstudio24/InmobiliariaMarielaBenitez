@@ -1,11 +1,11 @@
 import { useState } from "react";
-import {
-  getDownloadURL,
-  getStorage,
-  ref,
-  uploadBytesResumable,
-} from "firebase/storage";
-import { app } from "../firebase";
+// import {
+//   getDownloadURL,
+//   getStorage,
+//   ref,
+//   uploadBytesResumable,
+// } from "firebase/storage";
+// import { app } from "../firebase";
 
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -69,28 +69,19 @@ export default function CreateListing() {
     }
   };
   const storeImage = async (file) => {
-    return new Promise((resolve, reject) => {
-      const storage = getStorage(app);
-      const fileName = new Date().getTime() + file.name;
-      const storageRef = ref(storage, fileName);
-      const uploadTask = uploadBytesResumable(storageRef, file);
-      uploadTask.on(
-        "state_changed",
-        (snapshot) => {
-          const progress =
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log(`Subiendo Imágenes: ${progress}% hecho.`);
-        },
-        (error) => {
-          reject(error);
-        },
-        () => {
-          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            resolve(downloadURL);
-          });
-        }
-      );
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'inmoMB');
+    const response = await fetch('https://api.cloudinary.com/v1_1/dwrwuezdm/image/upload', {
+      method: 'POST',
+      body: formData,
     });
+    if (!response.ok) {
+      throw new Error('Error al subir imagen');
+    }
+    const data = await response.json();
+    console.log(`Subiendo Imágenes: 100% hecho.`);
+    return data.secure_url;
   };
 
   const handleRemoveImage = (index) => {
