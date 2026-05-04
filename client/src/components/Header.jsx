@@ -130,7 +130,7 @@ export default function Header() {
             </button>
             {isOpenInm && (
               <ul ref={menuRefInm} className='absolute  bg-red-900 rounded-lg shadow-md mt-2 p-4 z-50 text-white'>
-                <Link to='/search?searchTerm=&type=sale&type_property=all&sort=created_at&order=desc' onClick={closeMenuInm}><li className='hover:underline'>Venta</li></Link>
+                <Link to='/search?searchTerm=&type=sale&type_property=all&sort=created_at&order=desc' onClick={closeMenuInm}><li className='hover:underline'>Ventas</li></Link>
                 <Link to='/search?searchTerm=&type=rent&type_property=all&sort=created_at&order=desc' onClick={closeMenuInm}><li className='hover:underline'>Alquiler</li></Link>
                 <Link to='/tasaciones' onClick={closeMenu}><li className='hover:underline'>Tasaciones</li></Link>               
               </ul>
@@ -170,7 +170,7 @@ export default function Header() {
               <Link to='/informes' onClick={closeMobileMenu}><li className='hover:underline p-2'>Informes</li></Link>
               <Link to='/altas-bajas' onClick={closeMobileMenu}><li className='hover:underline p-2'>Altas/Bajas</li></Link>
               <Link to='/tasaciones' onClick={closeMobileMenu}><li className='hover:underline p-2'>Tasaciones</li></Link>
-              <Link to='/search?searchTerm=&type=sale&type_property=all&sort=created_at&order=desc' onClick={closeMobileMenu}><li className='hover:underline p-2'>Venta</li></Link>
+              <Link to='/search?searchTerm=&type=sale&type_property=all&sort=created_at&order=desc' onClick={closeMobileMenu}><li className='hover:underline p-2'>Ventas</li></Link>
               <Link to='/search?searchTerm=&type=rent&type_property=all&sort=created_at&order=desc' onClick={closeMobileMenu}><li className='hover:underline p-2'>Alquiler</li></Link>
             </ul>
           </li>
